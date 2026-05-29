@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Q&A | 集客講座コンテンツ</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">集客講座コンテンツ</a>
+    <button class="nav-toggle" aria-label="メニュー" onclick="toggleNav()">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="cohort4.html">4期生</a></li>
+      <li><a href="cohort5.html">5期生</a></li>
+      <li><a href="qa.html" class="active">Q&amp;A</a></li>
+      <li><a href="ai.html">AI特別講義</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main class="main">
+  <div class="page-header">
+    <h1>Q&amp;A</h1>
+    <p>よくある質問と回答をまとめています。</p>
+  </div>
+
+  <div class="qa-category">
+    <h2>チラシデザインについて</h2>
+
+    <div class="accordion-item">
+      <button class="accordion-q" onclick="toggleAccordion(this)">
+        チラシに載せる情報はどれくらいが適切ですか？
+        <svg class="accordion-icon" viewBox="0 0 20 20" fill="none">
+          <path d="M10 4v12M4 10h12" stroke="#2DB89A" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </button>
+      <div class="accordion-a">
+        チラシに載せる情報は「誰に・何を・どこで・いつ・どうやって申し込む」の5つに絞るのが基本です。情報を詰め込みすぎると、一番伝えたいことが埋もれてしまいます。まず必要な情報を書き出してから、優先順位をつけて削ぎ落としていきましょう。
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <button class="accordion-q" onclick="toggleAccordion(this)">
+        フォントは何種類まで使って良いですか？
+        <svg class="accordion-icon" viewBox="0 0 20 20" fill="none">
+          <path d="M10 4v12M4 10h12" stroke="#2DB89A" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </button>
+      <div class="accordion-a">
+        チラシで使うフォントは2種類までが目安です。タイトル用と本文用の2種類を決めたら、そこに統一することで全体がスッキリ見えます。3種類以上になると「まとまりがない」印象になりやすいので注意しましょう。
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <button class="accordion-q" onclick="toggleAccordion(this)">
+        カラーは何色まで使えますか？
+        <svg class="accordion-icon" viewBox="0 0 20 20" fill="none">
+          <path d="M10 4v12M4 10h12" stroke="#2DB89A" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </button>
+      <div class="accordion-a">
+        チラシに使う色は3色以内が基本です。メインカラー・サブカラー・アクセントカラーの3つを決めて使い回すと統一感が出ます。写真の色も含めてトータルで考えるとバランスが取りやすいです。
+      </div>
+    </div>
+  </div>
+
+  <div class="qa-category">
+    <h2>Canvaの使い方</h2>
+
+    <div class="accordion-item">
+      <button class="accordion-q" onclick="toggleAccordion(this)">
+        QRコードはどこに配置するのがベストですか？
+        <svg class="accordion-icon" viewBox="0 0 20 20" fill="none">
+          <path d="M10 4v12M4 10h12" stroke="#2DB89A" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </button>
+      <div class="accordion-a">
+        QRコードは右下に配置するのが基本です。人の視線はZ型に動くため、最後に目が止まる右下が「次のアクション」を促す最適な場所です。QRの近くに「詳細・申し込みはこちら」などの一言を添えると、スキャンする動機が明確になります。
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <button class="accordion-q" onclick="toggleAccordion(this)">
+        写真を選ぶときのポイントは何ですか？
+        <svg class="accordion-icon" viewBox="0 0 20 20" fill="none">
+          <path d="M10 4v12M4 10h12" stroke="#2DB89A" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </button>
+      <div class="accordion-a">
+        写真はできるだけ明るく・鮮明なものを使いましょう。暗い写真はチラシ全体を重く見せてしまいます。メイン写真は1枚を大きく使い、補足写真は2〜3枚に絞るとバランスが取れます。子どもや親子の笑顔の写真は、お教室の雰囲気が伝わりやすくおすすめです。
+      </div>
+    </div>
+  </div>
+
+  <div class="qa-category">
+    <h2>集客・告知について</h2>
+
+    <div class="accordion-item">
+      <button class="accordion-q" onclick="toggleAccordion(this)">
+        チラシを作ったあと、どこに配布するのが効果的ですか？
+        <svg class="accordion-icon" viewBox="0 0 20 20" fill="none">
+          <path d="M10 4v12M4 10h12" stroke="#2DB89A" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </button>
+      <div class="accordion-a">
+        ターゲットが集まる場所への配布が基本です。リトミック・ピアノ教室の場合は、近隣の保育園・幼稚園・子育て支援センター・図書館・スーパーの掲示板などが効果的です。また、LINEやInstagramで画像としてシェアするデジタル配布も合わせて行うと、より多くの方に届きます。
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<footer><p>集客講座コンテンツ</p></footer>
+
+<script>
+function toggleNav() {
+  document.getElementById('nav-links').classList.toggle('open');
+}
+function toggleAccordion(btn) {
+  btn.parentElement.classList.toggle('open');
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>スライド・動画 | 集客講座コンテンツ</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">集客講座コンテンツ</a>
+    <button class="nav-toggle" aria-label="メニュー" onclick="toggleNav()">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="chirashi.html">チラシ添削</a></li>
+      <li><a href="slides.html" class="active">スライド・動画</a></li>
+      <li><a href="qa.html">Q&amp;A</a></li>
+      <li><a href="ai.html">AI特別講義</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main class="main">
+  <div class="page-header">
+    <h1>スライド・アーカイブ動画</h1>
+    <p>勉強会のアーカイブ動画とスライド資料です。</p>
+  </div>
+
+  <div class="card">
+    <div class="chirashi-header">
+      <span class="badge">5期生</span>
+      <h2>チラシ勉強会</h2>
+    </div>
+
+    <h3 style="margin-bottom: 12px; color: var(--green); font-size: 16px;">アーカイブ動画</h3>
+    <div class="video-wrap">
+      <iframe src="https://player.vimeo.com/video/YOUR_VIMEO_ID?title=0&byline=0&portrait=0"
+              frameborder="0"
+              allow="autoplay; fullscreen; picture-in-picture"
+              allowfullscreen
+              title="チラシ勉強会アーカイブ動画">
+      </iframe>
+    </div>
+
+    <h3 style="margin: 24px 0 12px; color: var(--green); font-size: 16px;">スライド資料（クリックで拡大）</h3>
+    <div class="slide-grid" id="slide-grid"></div>
+  </div>
+</main>
+
+<div class="modal-overlay" id="modal" onclick="closeModal(event)">
+  <button class="modal-close" onclick="closeModal()">&times;</button>
+  <img class="modal-img" id="modal-img" src="" alt="">
+</div>
+
+<footer><p>集客講座コンテンツ</p></footer>
+
+<script>
+function toggleNav() {
+  document.getElementById('nav-links').classList.toggle('open');
+}
+
+const grid = document.getElementById('slide-grid');
+for (let i = 1; i <= 24; i++) {
+  const num = String(i).padStart(2, '0');
+  const thumb = document.createElement('div');
+  thumb.className = 'slide-thumb';
+  thumb.onclick = () => openModal(`assets/images/slides/slide-${num}.jpg`, `スライド${i}`);
+  thumb.innerHTML = `
+    <img src="assets/images/slides/slide-${num}.jpg" alt="スライド${i}" loading="lazy">
+    <span class="slide-num">${i}</span>
+  `;
+  grid.appendChild(thumb);
+}
+
+function openModal(src, alt) {
+  document.getElementById('modal-img').src = src;
+  document.getElementById('modal-img').alt = alt;
+  document.getElementById('modal').classList.add('open');
+}
+
+function closeModal(e) {
+  if (!e || e.target !== document.getElementById('modal-img')) {
+    document.getElementById('modal').classList.remove('open');
+  }
+}
+
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') closeModal();
+});
+</script>
+</body>
+</html>

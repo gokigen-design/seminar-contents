@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>講座コンテンツ | すみよさんの集客講座</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">集客講座コンテンツ</a>
+    <button class="nav-toggle" aria-label="メニュー" onclick="toggleNav()">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="cohort4.html">4期生</a></li>
+      <li><a href="cohort5.html">5期生</a></li>
+      <li><a href="qa.html">Q&amp;A</a></li>
+      <li><a href="ai.html">AI特別講義</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main class="main">
+  <div class="hero">
+    <h1>集客講座 コンテンツまとめ</h1>
+    <p>アーカイブ動画・チラシ添削事例・Q&amp;Aをまとめています</p>
+  </div>
+
+  <div class="card-grid">
+    <a href="cohort4.html" class="nav-card">
+      <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="36" height="36" rx="8" fill="#E8F8F4"/>
+        <rect x="9" y="8" width="12" height="20" rx="2" fill="#2DB89A" opacity="0.3"/>
+        <rect x="15" y="8" width="12" height="20" rx="2" fill="#2DB89A"/>
+        <path d="M18 16h6M18 20h4" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/>
+      </svg>
+      <h2>4期生</h2>
+      <p>チラシ添削事例（7名）／ 動画・資料は後ほど追加予定</p>
+      <span class="card-link">見る →</span>
+    </a>
+
+    <a href="cohort5.html" class="nav-card">
+      <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="36" height="36" rx="8" fill="#E8F8F4"/>
+        <rect x="7" y="10" width="22" height="14" rx="2" fill="#2DB89A"/>
+        <path d="M15 24v3M21 24v3M12 27h12" stroke="#2DB89A" stroke-width="1.5" stroke-linecap="round"/>
+        <path d="M15 16l4 2.5-4 2.5V16z" fill="#fff"/>
+      </svg>
+      <h2>5期生</h2>
+      <p>アーカイブ動画・スライド資料・AI最新情報 追加動画</p>
+      <span class="card-link">見る →</span>
+    </a>
+
+    <a href="qa.html" class="nav-card">
+      <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="36" height="36" rx="8" fill="#E8F8F4"/>
+        <circle cx="18" cy="18" r="10" stroke="#2DB89A" stroke-width="2"/>
+        <path d="M18 14c-1.657 0-3 1.12-3 2.5 0 1.38 1.343 2.5 3 2.5" stroke="#2DB89A" stroke-width="1.5" stroke-linecap="round"/>
+        <circle cx="18" cy="23" r="1" fill="#2DB89A"/>
+      </svg>
+      <h2>Q&amp;A</h2>
+      <p>チラシデザイン・Canva・集客のよくある質問と回答</p>
+      <span class="card-link">見る →</span>
+    </a>
+
+    <a href="ai.html" class="nav-card">
+      <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="36" height="36" rx="8" fill="#E8F8F4"/>
+        <rect x="10" y="12" width="16" height="12" rx="3" fill="#2DB89A" opacity="0.4"/>
+        <path d="M14 18h8M18 14v8" stroke="#2DB89A" stroke-width="1.5" stroke-linecap="round"/>
+        <circle cx="26" cy="12" r="3" fill="#2DB89A"/>
+      </svg>
+      <h2>AI特別講義</h2>
+      <p>AIの活用方法についての特別講義コンテンツ（順次追加予定）</p>
+      <span class="card-link">見る →</span>
+    </a>
+  </div>
+</main>
+
+<footer>
+  <p>集客講座コンテンツ</p>
+</footer>
+
+<script>
+function toggleNav() {
+  document.getElementById('nav-links').classList.toggle('open');
+}
+</script>
+</body>
+</html>
