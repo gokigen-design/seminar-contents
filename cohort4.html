@@ -371,6 +371,25 @@
 function toggleNav() {
   document.getElementById('nav-links').classList.toggle('open');
 }
+
+// PC：Before / After / 並べて の切り替え（プレゼン用）
+document.querySelectorAll('.chirashi-pc-view').forEach(function(pv){
+  pv.classList.add('mode-before');
+  var bar = document.createElement('div');
+  bar.className = 'pc-toggle';
+  bar.innerHTML = '<button data-mode="before" class="active">Before</button>'
+                + '<button data-mode="after">After</button>'
+                + '<button data-mode="both">並べて見比べる</button>';
+  bar.querySelectorAll('button').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      pv.classList.remove('mode-before','mode-after','mode-both');
+      pv.classList.add('mode-' + btn.getAttribute('data-mode'));
+      bar.querySelectorAll('button').forEach(function(b){ b.classList.remove('active'); });
+      btn.classList.add('active');
+    });
+  });
+  pv.parentNode.insertBefore(bar, pv);
+});
 </script>
 </body>
 </html>

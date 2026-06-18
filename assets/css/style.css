@@ -206,15 +206,14 @@ img { max-width: 100%; height: auto; display: block; }
 }
 .swiper-slide img { width: 100%; border-radius: 8px; }
 .slide-label {
-  position: absolute;
-  top: 10px;
-  left: 10px;
+  display: inline-block;
   background: rgba(0,0,0,0.55);
   color: #fff;
   font-size: 13px;
   font-weight: 700;
-  padding: 3px 10px;
+  padding: 3px 12px;
   border-radius: 20px;
+  margin-bottom: 8px;
 }
 .slide-label.after { background: var(--green); }
 .swiper-hint {
@@ -237,6 +236,42 @@ img { max-width: 100%; height: auto; display: block; }
   .swiper-wrap { display: none; }
   .swiper-hint { display: none; }
   .chirashi-pc-view { display: grid; }
+}
+
+/* PC：Before / After / 並べて 切り替え（プレゼン用） */
+.pc-toggle { display: none; }
+@media (min-width: 768px) {
+  .pc-toggle {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 14px;
+  }
+  .pc-toggle button {
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 8px 18px;
+    border-radius: 8px;
+    border: 2px solid var(--green);
+    background: var(--white);
+    color: var(--green);
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+  }
+  .pc-toggle button:hover { background: #eafaf8; }
+  .pc-toggle button.active { background: var(--green); color: #fff; }
+}
+.chirashi-pc-view.mode-before,
+.chirashi-pc-view.mode-after {
+  grid-template-columns: 1fr;
+  max-width: 460px;
+}
+.chirashi-pc-view.mode-before .img-wrap:nth-child(2),
+.chirashi-pc-view.mode-after .img-wrap:nth-child(1) {
+  display: none;
+}
+.chirashi-pc-view.mode-both {
+  grid-template-columns: 1fr 1fr;
 }
 
 /* フィードバック */
