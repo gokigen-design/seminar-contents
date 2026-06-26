@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI作業会 | 集客講座コンテンツ</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">集客講座コンテンツ</a>
+    <button class="nav-toggle" aria-label="メニュー" onclick="toggleNav()">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="cohort4.html">4期生</a></li>
+      <li><a href="cohort5.html">5期生</a></li>
+      <li><a href="qa.html">Q&amp;A</a></li>
+      <li><a href="ai.html">AI特別講義</a></li>
+      <li><a href="ai-sagyokai.html" class="active">AI作業会</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main class="main">
+  <div class="page-header">
+    <h1>AI作業会</h1>
+    <p>リアル作業会の録画・みんなの質問と答え・当日使えるプロンプトをまとめています。</p>
+  </div>
+
+  <!-- アーカイブ動画 -->
+  <div class="section-label">
+    <h2>アーカイブ動画</h2>
+  </div>
+  <div class="card">
+    <div class="coming-soon" style="padding:40px 20px;">
+      <svg width="48" height="48" viewBox="0 0 64 64" fill="none" style="margin:0 auto 12px;">
+        <circle cx="32" cy="32" r="30" stroke="#A8D8EA" stroke-width="3"/>
+        <path d="M26 22l16 10-16 10V22z" fill="#2DB89A"/>
+      </svg>
+      <p>当日の録画は、こちらに追加します。</p>
+    </div>
+  </div>
+
+  <!-- みんなの質問と答え -->
+  <div class="section-label">
+    <h2>みんなの質問と答え</h2>
+  </div>
+
+  <div class="accordion-item">
+    <button class="accordion-q" onclick="toggleAccordion(this)">
+      ChatGPTでいい画像が出るけど、Canvaに繋げて修正する方法が分からない
+      <svg class="accordion-icon" viewBox="0 0 20 20" fill="none">
+        <path d="M10 4v12M4 10h12" stroke="#2DB89A" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+    </button>
+    <div class="accordion-a">
+      Canvaの「マジックレイヤー」を使うか、ChatGPTの画面の中で直接編集すると修正できます。当日、実際の画面で一緒にやってみましょう。
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <button class="accordion-q" onclick="toggleAccordion(this)">
+      いかにもChatGPTで作ったっぽくなってしまう
+      <svg class="accordion-icon" viewBox="0 0 20 20" fill="none">
+        <path d="M10 4v12M4 10h12" stroke="#2DB89A" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+    </button>
+    <div class="accordion-a">
+      「お手本（モデリング先）」を渡すと、AIっぽさを減らせます。好きなデザインの画像を見せて「こんな雰囲気で作って」と伝えると、グッと自然になります。
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <button class="accordion-q" onclick="toggleAccordion(this)">
+      写真の上に素材を置きたいのに、フレームの中に入ってしまう
+      <svg class="accordion-icon" viewBox="0 0 20 20" fill="none">
+        <path d="M10 4v12M4 10h12" stroke="#2DB89A" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+    </button>
+    <div class="accordion-a">
+      下になる写真に「ロック」をかければ大丈夫です。ロックすると、その上に素材を置いてもフレームの中に吸い込まれません。
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <button class="accordion-q" onclick="toggleAccordion(this)">
+      ストーリーの文字の配置やデザインが、いつもわからない
+      <svg class="accordion-icon" viewBox="0 0 20 20" fill="none">
+        <path d="M10 4v12M4 10h12" stroke="#2DB89A" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+    </button>
+    <div class="accordion-a">
+      まず「お手本」をスクショして、そのまま真似てみましょう。そして、自分がやりやすい「型」を1つ作ってしまうのがおすすめです（例：あやは文字を左下にまとめて配置しています）。型が決まると、毎回迷わなくなります。
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <button class="accordion-q" onclick="toggleAccordion(this)">
+      使えるプロンプト（AIへの指示文）が知りたい
+      <svg class="accordion-icon" viewBox="0 0 20 20" fill="none">
+        <path d="M10 4v12M4 10h12" stroke="#2DB89A" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+    </button>
+    <div class="accordion-a">
+      下の「当日使えるプロンプト集」に、コピペして使える指示文をまとめました。【　】の部分を、自分の教室の内容に置き換えて使ってください。
+    </div>
+  </div>
+
+  <!-- 当日使えるプロンプト集 -->
+  <div class="section-label">
+    <h2>当日使えるプロンプト集</h2>
+  </div>
+  <p style="color:var(--text-sub);font-size:14px;margin-bottom:24px;">【　】の部分を、自分の教室の内容に置き換えて、コピペで使ってください。</p>
+
+  <div class="card">
+    <div class="feedback-section" style="border-top:none;margin-top:0;padding-top:0;">
+      <h3>① 背景・画像を作るとき</h3>
+      <div class="feedback-list">
+        <p class="fb-overall">「【リトミック】教室の【夏の体験会】の背景画像を作って。【やさしいパステルカラー】の雰囲気で、文字を入れる余白を残して。」</p>
+      </div>
+      <h3 style="margin-top:20px;">② イラスト・素材を作るとき</h3>
+      <div class="feedback-list">
+        <p class="fb-overall">「【夏祭り】の手描き風イラストを、透過背景で作って。」</p>
+      </div>
+      <h3 style="margin-top:20px;">③ ChatGPTっぽさを減らしたいとき（お手本を渡す）</h3>
+      <div class="feedback-list">
+        <p class="fb-overall">お手本にしたい画像を添付して<br>「この画像のような雰囲気で、【　】を作って。」</p>
+      </div>
+      <h3 style="margin-top:20px;">④ 告知文を作るとき</h3>
+      <div class="feedback-list">
+        <p class="fb-overall">「【リトミック】教室の【体験会】の告知文を、ママ向けにやさしい雰囲気で書いて。日時・対象・料金は次のとおり：【日時／対象／料金】」</p>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<footer><p>集客講座コンテンツ</p></footer>
+
+<script>
+function toggleNav() {
+  document.getElementById('nav-links').classList.toggle('open');
+}
+function toggleAccordion(btn) {
+  btn.parentElement.classList.toggle('open');
+}
+</script>
+</body>
+</html>
